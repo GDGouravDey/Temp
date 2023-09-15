@@ -1,0 +1,31 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav ul li {
+    margin-left: 100px;
+}
+nav a{
+    margin-left: 10px;
+}
+.carousel {
+    padding-top: 20px;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    display: flex;
+}
+.carousel a {
+    padding-top: 220px;
+}
+.carousel-control-prev {
+    height: 300px;
+}
+.carousel-control-next {
+    height: 300px;
+}
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+  }
