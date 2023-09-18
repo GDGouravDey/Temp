@@ -70,12 +70,7 @@
     <div class="or-container"><div class="line-separator"></div> <div class="or-label">OR</div><div class="line-separator"></div></div>
     <div class="google-signin-text"><p>Sign In using Google</p></div>
     <!--<div class="g-signin2" data-onsuccess="handleCredentialResponse"></div>-->
-    <div id="g_id_onload"
-     data-client_id="357398660492-8ntmim2amsa8tknt4nokrmuf645ipcs1.apps.googleusercontent.com"
-     data-context="signin"
-     data-login_uri="https://gdgouravdey.github.io/Temp/"
-     data-itp_support="true">
-    </div>
+    <div id="g_id_onload" data-client_id="357398660492-8ntmim2amsa8tknt4nokrmuf645ipcs1.apps.googleusercontent.com" data-context="signin" data-ux_mode="popup" data-callback="handleCredentialResponse" data-auto_prompt="false"></div>
     <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline" data-text="continue_with" data-size="large" data-logo_alignment="center"></div>
     <div class="signup"><p>New User? <a href="./signup.html">Click Here</a></p></div>
     <div class="privacy"><p><a href="./privacy.html">Click Here</a> to see our Privacy Policy</p></div>
@@ -90,7 +85,6 @@
     <script>
       function handleCredentialResponse(response) {
         const responsePayload = decodeJwtResponse(response.credential);
-        console.log("Signed In Successfully!");
         console.log("ID: " + responsePayload.sub);
         console.log("Name: " + responsePayload.name);
         console.log("Email: " + responsePayload.email);
