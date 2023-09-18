@@ -3,45 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="357398660492-8ntmim2amsa8tknt4nokrmuf645ipcs1.apps.googleusercontent.com">
     <title>Doctor Finder</title>
     <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="./index.html">
-            <img src="./assets/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Doctor Finder
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./book.html">Book Appointment</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./status.html">Appointment Status</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Log In</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
+    <link rel="stylesheet" href="./styling/style.css">
+    <link rel="stylesheet" href="./styling/login.css">
 </head>
 <body>
-    <div id="login">
-      <h2>Login / SignUp here.</h2>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="./index.html">
+        <img src="./assets/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Doctor Finder
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./appointment.html">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./department.html">Departments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./doctor.html">Doctors</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">About Us</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Log In / Sign Up</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+  <form class="form-signin">
+    <div class="text-center mb-4">
+      <img class="mb-4" src="./assets/favicon.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Sign In Portal</h1>
+      <p>Sign In to the Doctor Finder Website.</p>
+    </div>
+
+    <div class="form-label-group">
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" spellcheck="false" required autofocus>
+      <label for="inputEmail">Email address</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <label for="inputPassword">Password</label>
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember Me on This Device
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+    <div class="or-container"><div class="line-separator"></div> <div class="or-label">OR</div><div class="line-separator"></div></div>
+    <div class="google-signin-text"><p>Sign In using Google</p></div>
+    <!--<div class="g-signin2" data-onsuccess="handleCredentialResponse"></div>-->
+    <div id="g_id_onload"
+     data-client_id="357398660492-8ntmim2amsa8tknt4nokrmuf645ipcs1.apps.googleusercontent.com"
+     data-context="signin"
+     data-login_uri="https://gdgouravdey.github.io/Temp/"
+     data-itp_support="true">
+    </div>
+    <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline" data-text="continue_with" data-size="large" data-logo_alignment="center"></div>
+    <div class="signup"><p>New User? <a href="./signup.html">Click Here</a></p></div>
+    <div class="privacy"><p><a href="./privacy.html">Click Here</a> to see our Privacy Policy</p></div>
+    <!--<a href="#" onclick="signOut();">Sign out</a>-->
+    <p class="mt-5 mb-3 text-muted text-center">Doctor Finder &copy; 2023</p>
+  </form>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script> 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script>
+      function handleCredentialResponse(response) {
+        const responsePayload = decodeJwtResponse(response.credential);
+        console.log("Signed In Successfully!");
+        console.log("ID: " + responsePayload.sub);
+        console.log("Name: " + responsePayload.name);
+        console.log("Email: " + responsePayload.email);
+        console.log("Image URL: " + responsePayload.picture);
+      }
+      function decodeJwtResponse(data) {
+        var tokens = data.split(".");
+        return JSON.parse(atob(tokens[1]));
+      }
+      //function signOut() {
+        //var auth2 = gapi.auth2.getAuthInstance();
+        //auth2.signOut().then(function () {
+        //console.log('User signed out.');
+        //});
+      //}
+    </script>
 </body>
 </html>
