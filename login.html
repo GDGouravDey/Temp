@@ -89,6 +89,7 @@
         console.log("Name: " + responsePayload.name);
         console.log("Email: " + responsePayload.email);
         console.log("Image URL: " + responsePayload.picture);
+        alert('Signed In successfully!');
       }
       function decodeJwtResponse(data) {
         var tokens = data.split(".");
